@@ -1,0 +1,147 @@
+body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 15px;
+    }
+    h1 {
+      text-align: center;
+      color: #065f46;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+    }
+    form {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    input, button {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    input[type="number"], input[type="date"] {
+      width: 160px;
+    }
+    button {
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    #exportBtn {
+      background: #2563eb;
+      color: white;
+      border: none;
+    }
+    #exportBtn:hover {
+      background: #1d4ed8;
+    }
+    button[type="submit"] {
+      background: #059669;
+      color: white;
+      border: none;
+    }
+    button[type="submit"]:hover {
+      background: #047857;
+    }
+
+    .table-container {
+      overflow-x: auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 800px;
+    }
+    th, td {
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background: #065f46;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background: #f9f9f9;
+    }
+    .delete-btn, .edit-btn {
+      border: none;
+      padding: 6px 10px;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+    .delete-btn {
+      background: red;
+    }
+    .edit-btn {
+      background: orange;
+      margin-right: 5px;
+    }
+
+    .summary {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 20px;
+      text-align: center;
+      font-weight: bold;
+      color: #065f46;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      font-size: 1rem;
+    }
+
+    /* ✅ Responsive adjustments */
+    @media (max-width: 900px) {
+      table {
+        font-size: 0.9rem;
+      }
+      input[type="number"], input[type="date"] {
+        width: 140px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      input[type="number"], input[type="date"] {
+        width: 100%;
+      }
+      form {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      h1 {
+        font-size: 1.3rem;
+      }
+      .summary {
+        font-size: 0.9rem;
+      }
+      th, td {
+        padding: 8px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      th, td {
+        font-size: 0.8rem;
+        padding: 6px;
+      }
+      .delete-btn, .edit-btn {
+        padding: 4px 6px;
+        font-size: 0.75rem;
+      }
+      button[type="submit"], #exportBtn {
+        padding: 8px;
+      }
+    }

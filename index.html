@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>দৈনিক হিসাব খাতা</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+</head>
+<body>
+
+  <h1>📘 দৈনিক হিসাব খাতা</h1>
+
+  <form id="hisabForm">
+    <input type="date" id="date" required>
+    <input type="number" id="received" placeholder="মোট পাওয়া" required>
+    <input type="number" id="jawa" placeholder="যাওয়া" required>
+    <input type="number" id="asa" placeholder="আসা" required>
+    <input type="number" id="nasta" placeholder="নাস্তা" required>
+    <input type="number" id="bazar" placeholder="বাজার" required>
+    <button type="submit">যোগ করুন</button>
+    <button type="button" id="exportBtn">📤 Excel Export</button>
+  </form>
+
+  <div class="table-container">
+    <table id="hisabTable">
+      <thead>
+        <tr>
+          <th>তারিখ</th>
+          <th>মোট পাওয়া</th>
+          <th>যাওয়া</th>
+          <th>আসা</th>
+          <th>নাস্তা</th>
+          <th>বাজার</th>
+          <th>মোট খরচ</th>
+          <th>বাকি</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <div class="summary" id="summaryDisplay"></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
