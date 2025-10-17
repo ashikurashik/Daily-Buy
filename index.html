@@ -9,14 +9,15 @@
 
 </head>
 <body>
-
-  <h1>📘 দৈনিক হিসাব খাতা</h1>
+<h1>📘 দৈনিক হিসাব খাতা</h1>
 
   <form id="hisabForm">
     <input type="date" id="date" required>
     <input type="number" id="received" placeholder="মোট পাওয়া" required>
     <input type="number" id="jawa" placeholder="যাওয়া" required>
+    <input type="text" id="jawaPlace" placeholder="কোথায় যাচ্ছি">
     <input type="number" id="asa" placeholder="আসা" required>
+    <input type="text" id="asaPlace" placeholder="কোথা থেকে আসছি">
     <input type="number" id="nasta" placeholder="নাস্তা" required>
     <input type="number" id="bazar" placeholder="বাজার" required>
     <button type="submit">যোগ করুন</button>
@@ -30,7 +31,9 @@
           <th>তারিখ</th>
           <th>মোট পাওয়া</th>
           <th>যাওয়া</th>
+          <th>কোথায় যাচ্ছি</th>
           <th>আসা</th>
+          <th>কোথা থেকে আসছি</th>
           <th>নাস্তা</th>
           <th>বাজার</th>
           <th>মোট খরচ</th>
