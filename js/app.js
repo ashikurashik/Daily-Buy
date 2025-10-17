@@ -1,4 +1,4 @@
- const form = document.getElementById("hisabForm");
+const form = document.getElementById("hisabForm");
     const tableBody = document.querySelector("#hisabTable tbody");
     const summaryDisplay = document.getElementById("summaryDisplay");
     const exportBtn = document.getElementById("exportBtn");
@@ -18,13 +18,15 @@
         row.insertCell(0).innerText = r.date;
         row.insertCell(1).innerText = r.received;
         row.insertCell(2).innerText = r.jawa;
-        row.insertCell(3).innerText = r.asa;
-        row.insertCell(4).innerText = r.nasta;
-        row.insertCell(5).innerText = r.bazar;
-        row.insertCell(6).innerText = totalKhroch;
-        row.insertCell(7).innerText = baki;
+        row.insertCell(3).innerText = r.jawaPlace || "-";
+        row.insertCell(4).innerText = r.asa;
+        row.insertCell(5).innerText = r.asaPlace || "-";
+        row.insertCell(6).innerText = r.nasta;
+        row.insertCell(7).innerText = r.bazar;
+        row.insertCell(8).innerText = totalKhroch;
+        row.insertCell(9).innerText = baki;
 
-        const actionCell = row.insertCell(8);
+        const actionCell = row.insertCell(10);
         const editBtn = document.createElement("button");
         editBtn.innerText = "Edit";
         editBtn.classList.add("edit-btn");
@@ -53,6 +55,8 @@
       document.getElementById("asa").value = record.asa;
       document.getElementById("nasta").value = record.nasta;
       document.getElementById("bazar").value = record.bazar;
+      document.getElementById("jawaPlace").value = record.jawaPlace || "";
+      document.getElementById("asaPlace").value = record.asaPlace || "";
       editIndex = index;
     }
 
@@ -70,7 +74,9 @@
         date: document.getElementById("date").value,
         received: parseFloat(document.getElementById("received").value),
         jawa: parseFloat(document.getElementById("jawa").value),
+        jawaPlace: document.getElementById("jawaPlace").value.trim(),
         asa: parseFloat(document.getElementById("asa").value),
+        asaPlace: document.getElementById("asaPlace").value.trim(),
         nasta: parseFloat(document.getElementById("nasta").value),
         bazar: parseFloat(document.getElementById("bazar").value)
       };
@@ -96,7 +102,9 @@
         "তারিখ": r.date,
         "মোট পাওয়া": r.received,
         "যাওয়া": r.jawa,
+        "কোথায় যাচ্ছি": r.jawaPlace || "",
         "আসা": r.asa,
+        "কোথা থেকে আসছি": r.asaPlace || "",
         "নাস্তা": r.nasta,
         "বাজার": r.bazar,
         "মোট খরচ": r.jawa + r.asa + r.nasta + r.bazar,
