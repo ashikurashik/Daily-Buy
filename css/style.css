@@ -1,4 +1,4 @@
-body {
+    body {
       font-family: "Segoe UI", Arial, sans-serif;
       background-color: #f4f6f8;
       margin: 0;
@@ -27,7 +27,7 @@ body {
       border: 1px solid #ccc;
       font-size: 1rem;
     }
-    input[type="number"], input[type="date"] {
+    input[type="number"], input[type="date"], input[type="text"] {
       width: 160px;
     }
     button {
@@ -61,7 +61,7 @@ body {
     table {
       width: 100%;
       border-collapse: collapse;
-      min-width: 800px;
+      min-width: 900px;
     }
     th, td {
       padding: 10px;
@@ -108,13 +108,13 @@ body {
       table {
         font-size: 0.9rem;
       }
-      input[type="number"], input[type="date"] {
+      input[type="number"], input[type="date"], input[type="text"] {
         width: 140px;
       }
     }
 
     @media (max-width: 600px) {
-      input[type="number"], input[type="date"] {
+      input[type="number"], input[type="date"], input[type="text"] {
         width: 100%;
       }
       form {
